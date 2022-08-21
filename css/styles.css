@@ -190,8 +190,13 @@ img {
 }
 
 .header-contact-list .link {
-  /* color: var(--color-text-main); */
+  display: flex;
   color: inherit;
+}
+
+.header-contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .header .link:hover,
@@ -269,11 +274,26 @@ img {
 .feature-list > .list-item {
   flex-basis: calc((100% - 90px) / 4);
 }
+
 .feature-list > .list-item:not(:last-child) {
   margin-right: 30px;
 }
 
+.feature-icon-tile {
+  display: flex;
+  background-color: var(--color-background-secondary);
+  border-radius: 4px;
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  margin: 25px auto;
+}
+
 .feature-title {
+  margin-top: 30px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
