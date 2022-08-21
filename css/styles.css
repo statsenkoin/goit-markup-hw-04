@@ -7,6 +7,7 @@
   --color-background-secondary: #f5f4fa;
   --color-background-footer: #2f303a;
   --color-header-border-line: #ececec;
+  --color-accent: #2196f3;
 
   --color-hero-background: #c4c4c4;
   --color-hero-overlay: rgba(47, 48, 58, 0.4);
@@ -15,11 +16,9 @@
   --color-text-secondary: #ffffff;
   --color-text-title: #212121;
   --color-text-contacts: rgba(255, 255, 255, 0.6);
-  --color-text-accent: #2196f3;
 
   --color-logo-header: #000000;
   --color-logo-footer: #ffffff;
-  --color-logo-accent: #2196f3;
 
   --color-button-hero-text: #ffffff;
   --color-button-hero-background: #2196f3;
@@ -28,7 +27,6 @@
 
   --color-button-filter-background: #f5f4fa;
   --color-button-filter-text: #212121;
-  --color-button-filter-background-focus: #2196f3;
   --color-button-filter-text-focus: #ffffff;
   --color-button-filter-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -36,6 +34,8 @@
   --color-card-border: #eeeeee;
   --color-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  --color-icon-socials: #afb1b8;
 
   /* -------------- Шрифти сайту --------------------- */
 
@@ -126,7 +126,7 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: var(--color-logo-accent);
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -177,7 +177,7 @@ img {
 }
 
 .header-menu-list .current {
-  color: var(--color-text-accent);
+  color: var(--color-accent);
 }
 
 .header-contact-list {
@@ -201,7 +201,7 @@ img {
 
 .header .link:hover,
 .header .link:focus {
-  color: var(--color-text-accent);
+  color: var(--color-accent);
 }
 
 /* ============== Блок main в index.html ============== */
@@ -382,6 +382,39 @@ img {
   line-height: 1.19;
 }
 
+.team-socials-tile {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-socials-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: var(--color-icon-socials);
+  border-radius: 50%;
+}
+
+.team-socials-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-socials-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.team-socials-link:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-secondary);
+}
 /* ============= Блок main в portfolio.html ================ */
 
 /* -------------------- filter buttons -------------------- */
@@ -411,7 +444,7 @@ img {
 .filter-list-button:hover,
 .filter-list-button:focus {
   color: var(--color-button-filter-text-focus);
-  background-color: var(--color-button-filter-background-focus);
+  background-color: var(--color-accent);
   box-shadow: var(--color-button-filter-shadow);
 }
 
@@ -484,5 +517,5 @@ img {
 
 .footer .link:hover,
 .footer .link:focus {
-  color: var(--color-text-accent);
+  color: var(--color-accent);
 }
