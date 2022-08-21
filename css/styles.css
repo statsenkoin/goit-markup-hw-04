@@ -1,12 +1,11 @@
-/* ===== Глобальні налаштування стилів ===== */
+/* ======== Глобальні налаштування стилів ========= */
 
 :root {
-  /* Кольори сайту */
+  /* -------------- Кольори сайту ---------------- */
 
   --color-background-primary: #ffffff;
   --color-background-secondary: #f5f4fa;
   --color-background-footer: #2f303a;
-  --color-card-border: #eeeeee;
   --color-header-border-line: #ececec;
 
   --color-text-main: #757575;
@@ -19,39 +18,42 @@
   --color-logo-footer: #ffffff;
   --color-logo-accent: #2196f3;
 
-  --color-button-background: #f5f4fa;
-  --color-button-text: #212121;
-  --color-button-background-focus: #2196f3;
-  --color-button-text-focus: #ffffff;
-  --color-button-logo-background: #2196f3;
-  --color-button-logo-background-focus: #188ce8;
+  --color-button-hero-text: #ffffff;
+  --color-button-hero-background: #2196f3;
+  --color-button-hero-background-focus: #188ce8;
+  --color-button-hero-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  --color-button-logo-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --color-button-filter-background: #f5f4fa;
+  --color-button-filter-text: #212121;
+  --color-button-filter-background-focus: #2196f3;
+  --color-button-filter-text-focus: #ffffff;
   --color-button-filter-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  --color-card-border: #eeeeee;
   --color-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  /* Шрифти сайту */
+  /* -------------- Шрифти сайту --------------------- */
 
   --font-main: 'Roboto', sans-serif;
   --font-logo: 'Raleway', sans-serif;
 }
 
 body {
-  /* Основний шрифт */
+  /*----------------- Основний шрифт ----------------- */
 
   font-family: var(--font-main);
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--color-text-main);
 
-  /* Основниий фон */
+  /*------------------ Основниий фон ----------------- */
 
   background-color: var(--color-background-primary);
 }
 
-/* Ховаємо заголовки */
+/* ------------------ Ховаємо заголовки --------------- */
 
 .visually-hidden {
   position: absolute;
@@ -67,7 +69,7 @@ body {
   overflow: hidden;
 }
 
-/* Перевизначення для окремих селекторів */
+/* ----- Перевизначення для окремих селекторів ------- */
 
 h1,
 h2,
@@ -112,7 +114,7 @@ img {
   padding: 0 15px;
 }
 
-/* ===== Блоки header + footer ===== */
+/* ------------------- logo ------------------------- */
 
 .logo {
   display: block;
@@ -133,18 +135,18 @@ img {
   color: var(--color-logo-footer);
 }
 
-/* ----- header ----- */
+/* ==================== header ==================== */
 
-.header-line {
+.header {
   border-bottom: 1px solid var(--color-header-border-line);
 }
 
-.header-line .container {
+.header .container {
   display: flex;
   align-items: center;
 }
 
-.header-line .link {
+.header .link {
   display: block;
   padding-block: 32px;
 
@@ -153,84 +155,50 @@ img {
   letter-spacing: 0.02em;
 }
 
-.menu {
+.header-menu {
   display: flex;
   align-items: center;
 }
 
-.menu-list {
+.header-menu-list {
   display: flex;
   margin-left: 93px;
 }
 
-.menu-list > .list-item:not(:first-child) {
+.header-menu-list > .list-item:not(:first-child) {
   margin-left: 50px;
 }
 
-.menu-list .link {
+.header-menu-list .link {
   color: var(--color-text-title);
 }
 
-.contact-list {
+.header-menu-list .current {
+  color: var(--color-text-accent);
+}
+
+.header-contact-list {
   display: flex;
   margin-left: auto;
 }
 
-.contact-list > .list-item:not(:first-child) {
+.header-contact-list > .list-item:not(:first-child) {
   margin-left: 50px;
 }
 
-.contact-list .link {
+.header-contact-list .link {
   /* color: var(--color-text-main); */
   color: inherit;
 }
 
-/* ----- footer ----- */
-
-.footer-line {
-  padding-block: 60px;
-}
-
-.footer-line address {
-  margin-top: 20px;
-
-  font-style: normal;
-}
-
-.footer-line .list-item:not(:first-child) {
-  margin-top: 9px;
-}
-
-.footer-line .link {
-  line-height: 1.71;
-}
-
-.link.location {
-  color: var(--color-text-secondary);
-}
-
-.link.mail,
-.link.tel {
-  color: var(--color-text-contacts);
-}
-
-.footer-line {
-  background-color: var(--color-background-footer);
-}
-
-/* ----- header + footer ----- */
-
-.link.current,
-.link:hover,
-.link:focus {
+.header .link:hover,
+.header .link:focus {
   color: var(--color-text-accent);
 }
 
-/* ===== Блок main ===== */
+/* ============== Блок main в index.html ============== */
 
-/* ----- Блок main в index.html ----- */
-
-/* hero */
+/* ---------------------- hero ------------------------ */
 
 .hero {
   text-align: center;
@@ -257,7 +225,7 @@ img {
   color: var(--color-text-secondary);
 }
 
-.button-hero {
+.hero-button {
   margin-top: 30px;
   padding: 10px 32px;
 
@@ -266,20 +234,20 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   text-align: center;
-  color: var(--color-button-text-focus);
+  color: var(--color-button-hero-text);
 
-  background-color: var(--color-button-logo-background);
-  box-shadow: var(--color-button-logo-shadow);
+  background-color: var(--color-button-hero-background);
+  box-shadow: var(--color-button-hero-shadow);
 }
 
-.button-hero:hover,
-.button-hero:focus {
-  background-color: var(--color-button-logo-background-focus);
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--color-button-hero-background-focus);
 }
 
-/* features */
+/* ----------------------- features ------------------------- */
 
-/* Прибирає зайвий padding */
+/* ----- Прибирає зайвий padding ----- */
 .section.features {
   padding-bottom: 0;
 }
@@ -303,28 +271,28 @@ img {
   color: var(--color-text-title);
 }
 
-.feature-description {
+.feature-text {
   margin-top: 10px;
 
   font-weight: 400;
   line-height: 1.71;
 }
 
-/* activity */
+/*---------------------- activity ----------------------- */
 
-.activity-list {
-  display: flex;
-  margin-top: 50px;
-}
-
-.activity-title,
-.team-title {
+.activity-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   color: var(--color-text-title);
 }
+
+.activity-list {
+  display: flex;
+  margin-top: 50px;
+}
+
 .activity-list > .list-item {
   flex-basis: calc((100% - 60px) / 3);
 }
@@ -333,10 +301,18 @@ img {
   margin-right: 30px;
 }
 
-/* team */
+/* ----------------------- team -------------------------- */
 
 .team {
   background-color: var(--color-background-secondary);
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--color-text-title);
 }
 
 .team-list {
@@ -368,7 +344,7 @@ img {
   color: var(--color-text-title);
 }
 
-.member-activity {
+.team-member-activity {
   margin-top: 10px;
 
   font-weight: 400;
@@ -376,9 +352,9 @@ img {
   line-height: 1.19;
 }
 
-/* ----- Блок main в portfolio.html ----- */
+/* ============= Блок main в portfolio.html ================ */
 
-/* filter buttons */
+/* -------------------- filter buttons -------------------- */
 
 .filter-list {
   display: flex;
@@ -390,7 +366,7 @@ img {
   margin-right: 8px;
 }
 
-.filter-list .button {
+.filter-list-button {
   padding: 8px 22px;
 
   font-weight: 500;
@@ -398,18 +374,18 @@ img {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--color-text-title);
-  background-color: var(--color-button-background);
+  color: var(--color-button-filter-text);
+  background-color: var(--color-button-filter-background);
 }
 
-.filter-list .button:hover,
-.filter-list .button:focus {
-  color: var(--color-button-text-focus);
-  background-color: var(--color-button-background-focus);
+.filter-list-button:hover,
+.filter-list-button:focus {
+  color: var(--color-button-filter-text-focus);
+  background-color: var(--color-button-filter-background-focus);
   box-shadow: var(--color-button-filter-shadow);
 }
 
-/* project list */
+/* -------------------- project list ---------------------- */
 
 .projects-list {
   display: flex;
@@ -423,7 +399,7 @@ img {
   margin-left: 30px;
 }
 
-.card-description {
+.projects-card {
   padding: 20px 24px;
   border-right: 1px solid var(--color-card-border);
   border-bottom: 1px solid var(--color-card-border);
@@ -438,10 +414,45 @@ img {
   color: var(--color-text-title);
 }
 
-.project-description {
+.project-text {
   margin-top: 4px;
 
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
+}
+
+/* ==================== footer ==================== */
+
+.footer {
+  padding-block: 60px;
+  background-color: var(--color-background-footer);
+}
+
+.footer .list-item:not(:first-child) {
+  margin-top: 9px;
+}
+
+.footer .link {
+  line-height: 1.71;
+}
+
+.footer-address {
+  margin-top: 20px;
+
+  font-style: normal;
+}
+
+.footer-address-list .location {
+  color: var(--color-text-secondary);
+}
+
+.footer-address-list .mail,
+.footer-address-list .tel {
+  color: var(--color-text-contacts);
+}
+
+.footer .link:hover,
+.footer .link:focus {
+  color: var(--color-text-accent);
 }
