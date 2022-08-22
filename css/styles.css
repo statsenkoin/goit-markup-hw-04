@@ -125,7 +125,7 @@ img {
 /* ------------------- logo ------------------------- */
 
 .logo {
-  display: block;
+  display: inline-block;
 
   font-family: var(--font-logo);
   font-weight: 700;
