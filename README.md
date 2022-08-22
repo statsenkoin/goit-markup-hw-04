@@ -16,7 +16,7 @@
     overflow: hidden;
     }
 
-    75  Властивість “clip-path” не існує : inset(100%)
+    75	Властивість “clip-path” не існує : inset(100%)
     204 Property “fill” doesn't exist.
         The closest matching property name is “all” : currentColor
     402 Property “fill” doesn't exist.
