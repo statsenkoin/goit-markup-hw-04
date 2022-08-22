@@ -281,6 +281,9 @@ img {
 
 .feature-icon-tile {
   display: flex;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-background-secondary);
   border-radius: 4px;
 }
@@ -288,7 +291,6 @@ img {
 .feature-icon {
   width: 70px;
   height: 70px;
-  margin: 25px auto;
 }
 
 .feature-title {
@@ -415,6 +417,50 @@ img {
   background-color: var(--color-accent);
   color: var(--color-text-secondary);
 }
+
+/* --------------------- customers ------------------------  */
+
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--color-text-title);
+}
+
+.customers-list {
+  display: flex;
+  margin-top: 50px;
+}
+
+.customers-list > .list-item {
+  flex-basis: calc((100% - 150px) / 6);
+}
+
+.customers-list > .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.customers-link {
+  display: flex;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-icon-socials);
+  border: 1px solid var(--color-icon-socials);
+  border-radius: 4px;
+}
+
+.customers-icon {
+  fill: currentColor;
+}
+
+.customers-link:hover {
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
 /* ============= Блок main в portfolio.html ================ */
 
 /* -------------------- filter buttons -------------------- */
