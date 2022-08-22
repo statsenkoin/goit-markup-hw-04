@@ -508,9 +508,8 @@ img {
   line-height: 1.88;
   color: var(--color-text-main);
 }
-
-.project-article:hover,
-.project-article:focus-within {
+.project-link:focus .project-article,
+.project-article:hover {
   box-shadow: var(--color-project-article-shadow);
 }
 
