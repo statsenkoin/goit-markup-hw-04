@@ -485,10 +485,6 @@ img {
   margin-left: 30px;
 }
 
-.project-article:hover {
-  box-shadow: var(--color-project-article-shadow);
-}
-
 .project-card {
   padding: 20px 24px;
   border-right: 1px solid var(--color-project-card-border);
@@ -511,6 +507,11 @@ img {
   font-size: 16px;
   line-height: 1.88;
   color: var(--color-text-main);
+}
+
+.project-article:hover,
+.project-article:focus {
+  box-shadow: var(--color-project-article-shadow);
 }
 
 /* ==================== footer ==================== */
