@@ -510,7 +510,7 @@ img {
 }
 
 .project-article:hover,
-.project-article:focus {
+.project-article:focus-within {
   box-shadow: var(--color-project-article-shadow);
 }
 
