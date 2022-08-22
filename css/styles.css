@@ -36,6 +36,8 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   --color-icon-socials: #afb1b8;
+  --color-icon-socials-background: transparent;
+  --color-icon-socials-background-footer: rgba(255, 255, 255, 0.1);
 
   /* -------------- Шрифти сайту --------------------- */
 
@@ -288,11 +290,6 @@ img {
   border-radius: 4px;
 }
 
-.feature-icon {
-  width: 70px;
-  height: 70px;
-}
-
 .feature-title {
   margin-top: 30px;
 
@@ -384,36 +381,35 @@ img {
   line-height: 1.19;
 }
 
-.team-socials-tile {
+.socials-tile {
   display: flex;
   margin-top: 16px;
   justify-content: center;
   align-items: center;
 }
 
-.team-socials-link {
+.socials-link {
   display: flex;
   width: 44px;
   height: 44px;
 
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: var(--color-icon-socials-background);
   color: var(--color-icon-socials);
   border-radius: 50%;
 }
 
-.team-socials-link:not(:last-child) {
+.socials-link:not(:last-child) {
   margin-right: 10px;
 }
 
-.team-socials-icon {
-  width: 20px;
-  height: 20px;
+.socials-icon {
   fill: currentColor;
 }
 
-.team-socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--color-accent);
   color: var(--color-text-secondary);
 }
@@ -538,6 +534,11 @@ img {
   background-color: var(--color-background-footer);
 }
 
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+
 .footer .list-item:not(:first-child) {
   margin-top: 9px;
 }
@@ -547,7 +548,9 @@ img {
 }
 
 .footer-address {
+  width: 231px;
   margin-top: 20px;
+  margin-right: 70px;
 
   font-style: normal;
 }
@@ -561,7 +564,27 @@ img {
   color: var(--color-text-contacts);
 }
 
+.footer-join-text {
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: var(--color-text-secondary);
+}
+
+.footer .socials-tile {
+  width: 206px;
+  margin-top: 20px;
+}
+
+.footer .socials-link {
+  background-color: var(--color-icon-socials-background-footer);
+  color: var(--color-text-secondary);
+}
+
 .footer .link:hover,
-.footer .link:focus {
-  color: var(--color-accent);
+.footer .link:focus,
+.footer .socials-link:hover,
+.footer .socials-link:focus {
+  background-color: var(--color-accent);
 }
