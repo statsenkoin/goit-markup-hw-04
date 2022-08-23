@@ -226,9 +226,9 @@ img {
   background-image: linear-gradient(to right, var(--color-hero-overlay), var(--color-hero-overlay)),
     url(../images/hero-background.jpg);
 
-  /* background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .hero-title {
