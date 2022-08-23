@@ -196,6 +196,7 @@ img {
 
 .header-contact-list .link {
   display: flex;
+  align-items: center;
   color: inherit;
 }
 
