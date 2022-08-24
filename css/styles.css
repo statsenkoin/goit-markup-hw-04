@@ -38,8 +38,7 @@
   --color-team-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  --color-icon-socials: #afb1b8;
-  --color-icon-socials-background: transparent;
+  --color-icon: #afb1b8;
   --color-icon-socials-background-footer: rgba(255, 255, 255, 0.1);
 
   /* -------------- Шрифти сайту --------------------- */
@@ -227,7 +226,7 @@ img {
   background-image: linear-gradient(to right, var(--color-hero-overlay), var(--color-hero-overlay)),
     url(../images/hero-background.jpg);
 
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
   background-size: cover;
 }
@@ -287,6 +286,8 @@ img {
 
 .feature-icon-tile {
   display: flex;
+  /* width = flex-basis */
+  /* width: 270px; */
   height: 120px;
   justify-content: center;
   align-items: center;
@@ -316,6 +317,8 @@ img {
 .activity-title,
 .team-title,
 .customers-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -323,11 +326,8 @@ img {
   color: var(--color-text-title);
 }
 
-.activity-list,
-.team-list,
-.customers-list {
+.activity-list {
   display: flex;
-  margin-top: 50px;
 }
 
 .activity-list > .list-item {
@@ -342,6 +342,10 @@ img {
 
 .team {
   background-color: var(--color-background-secondary);
+}
+
+.team-list {
+  display: flex;
 }
 
 .team-list > .list-item {
@@ -376,43 +380,42 @@ img {
   line-height: 1.19;
 }
 
-.socials-tile {
+.team-socials-list {
   display: flex;
   margin-top: 16px;
   justify-content: center;
   align-items: center;
 }
 
-.socials-link {
+.team-socials-list > .list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-socials-link {
   display: flex;
   width: 44px;
   height: 44px;
   justify-content: center;
   align-items: center;
 
-  background-color: var(--color-icon-socials-background);
-  color: var(--color-icon-socials);
+  color: var(--color-icon);
   border-radius: 50%;
 }
 
-.socials-link:not(:last-child) {
-  margin-right: 10px;
-}
-
-.socials-icon {
+.team-socials-icon {
   fill: currentColor;
 }
 
-.socials-link:hover,
-.socials-link:focus {
-  background-color: var(--color-accent);
+.team-socials-link:hover,
+.team-socials-link:focus {
   color: var(--color-text-secondary);
+  background-color: var(--color-accent);
 }
 
 /* --------------------- customers ------------------------  */
 
-.customers-list > .list-item {
-  flex-basis: calc((100% - 150px) / 6);
+.customers-list {
+  display: flex;
 }
 
 .customers-list > .list-item:not(:last-child) {
@@ -420,13 +423,15 @@ img {
 }
 
 .customers-link {
+  /* flex-basis: calc((100% - 150px) / 6); */
   display: flex;
+  width: 170px;
   height: 92px;
   justify-content: center;
   align-items: center;
 
-  color: var(--color-icon-socials);
-  border: 1px solid var(--color-icon-socials);
+  color: var(--color-icon);
+  border: 1px solid var(--color-icon);
   border-radius: 4px;
 }
 
@@ -447,7 +452,7 @@ img {
 .filter-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .filter-list > .list-item:not(:last-child) {
@@ -527,20 +532,20 @@ img {
   align-items: baseline;
 }
 
-.footer .list-item:not(:first-child) {
-  margin-top: 9px;
-}
-
-.footer .link {
-  line-height: 1.71;
-}
-
 .footer-address {
   width: 231px;
   margin-top: 20px;
   margin-right: 70px;
 
   font-style: normal;
+}
+
+.footer-address-list .list-item:not(:first-child) {
+  margin-top: 9px;
+}
+
+.footer-address-list .link {
+  line-height: 1.71;
 }
 
 .footer-address-list .location {
@@ -552,6 +557,11 @@ img {
   color: var(--color-text-contacts);
 }
 
+.footer-address-list .link:hover,
+.footer-address-list .link:focus {
+  color: var(--color-accent);
+}
+
 .footer-join-text {
   font-weight: 700;
   line-height: 16px;
@@ -560,19 +570,35 @@ img {
   color: var(--color-text-secondary);
 }
 
-.footer .socials-tile {
+.footer-socials-list {
+  display: flex;
   width: 206px;
   margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer .socials-link {
+.footer-socials-list > .list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-socials-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--color-icon-socials-background-footer);
   color: var(--color-text-secondary);
+  border-radius: 50%;
 }
 
-.footer .link:hover,
-.footer .link:focus,
-.footer .socials-link:hover,
-.footer .socials-link:focus {
+.footer-socials-icon {
+  fill: currentColor;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
   background-color: var(--color-accent);
 }

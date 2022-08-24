@@ -23,3 +23,5 @@
         The closest matching property name is “all” : currentColor
     433 Property “fill” doesn't exist.
         The closest matching property name is “all” : currentColor
+
+    header border
